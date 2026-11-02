@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sabor 21</title>
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header-app">
+
+    <a href="index.html" class="logo-centro">
+        <img src="img/logo.png" alt="Sabor 21">
+    </a>
+
+</header>
+
+    <main>
+
+        <!-- Categorias-->
+         <h1 class="titulo">Categorías</h1>
+         <h4 class="subtitulo">Elegí lo que más te guste</h4>
+        <section class="contenedor-categoria" id="contenedor-categoria">
+
+        </section>
+
+        <!-- CARRITO -->
+        <div class="overlay" id="overlay"></div>
+
+        <section id="carrito-panel">
+
+            <div class="carrito-header">
+
+                <h2>🛒 Mi carrito</h2>
+
+                <button id="cerrar-carrito">
+                    <img style="width: 35px;" src="img/x.png" alt="">
+                </button>
+
+            </div>
+
+
+            <div id="lista-carrito">
+                <!-- Productos del carrito -->
+            </div>
+
+
+            <div class="carrito-footer">
+
+                <p id="total">
+                    Total: 0 Gs.
+                </p>
+
+                <button onclick="irFormulario()" id="btn-pedir">
+                    Terminar mi pedido
+                </button>
+
+            </div>
+
+        </section>
+
+        <!--Footer-->
+        <footer class="footer-app">
+
+    <a href="index.html" class="footer-item activo">
+        <i class="fa-solid fa-house"></i>
+        <span>Inicio</span>
+    </a>
+
+    <a href="#promociones" class="footer-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Ubicación</span>
+    </a>
+
+    <a href="#contacto" class="footer-item">
+        <i class="fa-solid fa-phone"></i>
+        <span>Contacto</span>
+    </a>
+
+    <button class="footer-item btn-carrito" id="btn-carrito" type="button">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span>Carrito</span>
+    <span class="footer-contador contador-carrito">0</span>
+</button>
+
+</footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/carrito.js"></script>
+    <script src="js/productos.js"></script>
+    <script src="js/categorias.js"></script>
+    <script src="js/btn-hambur.js"></script>
+
+    <script src="js/pedido.js"></script>
+
+</body>
+
+</html>
+

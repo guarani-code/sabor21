@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos</title>
+
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+
+<body>
+
+    <header class="header-app">
+
+        <a href="index.html" class="logo-centro">
+            <img src="img/logo.png" alt="Sabor 21">
+        </a>
+
+    </header>
+
+    <h3>Ingresa tus datos por favor</h3>
+    <p>para realizar el pedido</p>
+
+    <!-- Formulario con Boostrap -->
+    <form id="formulario-pedido" class="formulario-pedido">
+        <h2>Completar pedido</h2>
+        <p class="formulario-descripcion">Dejanos tus datos para preparar tu pedido.</p>
+
+        <label for="nombre">Nombre y apellido</label>
+        <input type="text" id="nombre" placeholder="Juan Pérez" required>
+
+        <label for="telefono">Número de celular</label>
+        <input type="tel" id="telefono" placeholder="0971 362 758" required>
+
+        <fieldset>
+            <legend>¿Cómo querés recibir tu pedido?</legend>
+
+            <label class="opcion-entrega">
+                <input type="radio" name="entrega" value="delivery" checked>
+                Delivery
+            </label>
+
+            <label class="opcion-entrega">
+                <input type="radio" name="entrega" value="retirar">
+                Retirar del local
+            </label>
+        </fieldset>
+
+        <div id="seccion-ubicacion">
+            <button type="button" id="btn-ubicacion" class="btn-ubicacion">
+                <i class="fa-solid fa-location-dot"></i>
+                Compartir mi ubicación
+            </button>
+
+            <input type="hidden" id="direccion">
+            <p id="estado-ubicacion" aria-live="polite"></p>
+        </div>
+
+        <label for="observacion">Nota para el pedido <span>(opcional)</span></label>
+        <textarea id="observacion" rows="3" placeholder="¿Alguna indicación?"></textarea>
+
+        <button type="submit" class="btn-enviar-pedido">Enviar pedido</button>
+    </form>
+
+    <!--Footer-->
+    <footer class="footer-app">
+
+        <a href="index.html" class="footer-item activo">
+            <i class="fa-solid fa-house"></i>
+            <span>Inicio</span>
+        </a>
+
+        <a href="#promociones" class="footer-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Ubicación</span>
+        </a>
+
+        <a href="#contacto" class="footer-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>Contacto</span>
+        </a>
+
+        <button class="footer-item btn-carrito" id="btn-carrito" type="button">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Carrito</span>
+            <span class="footer-contador contador-carrito">0</span>
+        </button>
+
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/solicitar-dirección.js"></script>
+    <script src="js/pedido.js"></script>
+
+</body>
+
+</html>

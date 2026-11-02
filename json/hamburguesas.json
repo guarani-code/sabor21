@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "nombre": "Hamburguesa Clásica",
+    "img": "img/hamburguesas/clasica.png",
+    "precio": 25000,
+    "ingredientes": "Pan con sésamo, carne vacuna, queso cheddar, lechuga, tomate, cebolla morada y salsa especial.",
+    "categoria": "hamburguesas"
+  },
+  {
+    "id": 2,
+    "nombre": "Doble Cheeseburger",
+    "img": "img/hamburguesas/cheseburguer.png",
+    "precio": 30000,
+    "ingredientes": "Pan con sésamo, doble carne vacuna, doble cheddar, lechuga, tomate, cebolla morada, pepinillos y salsa especial.",
+    "categoria": "hamburguesas"
+  },
+  {
+    "id": 3,
+    "nombre": "BBQ Burger",
+    "img": "img/hamburguesas/bbq.png",
+    "precio": 45000,
+    "ingredientes": "Pan con sésamo, carne vacuna, queso cheddar, panceta crocante, cebolla crispy, lechuga, tomate y salsa BBQ.",
+    "categoria": "hamburguesas"
+  },
+  {
+    "id": 4,
+    "nombre": "Crispy Chicken Burger",
+    "img": "img/hamburguesas/pollo.png",
+    "precio": 35000,
+    "ingredientes": "Pan con sésamo, pollo crocante, queso cheddar, lechuga, tomate y salsa cremosa.",
+    "categoria": "hamburguesas"
+  },
+  {
+    "id": 5,
+    "nombre": "Hawaiana Burger",
+    "img": "img/hamburguesas/tropical.png",
+    "precio": 50000,
+    "ingredientes": "Pan con sésamo, carne vacuna, piña a la plancha, jamón, panceta crocante, queso cheddar, lechuga, tomate y salsa cremosa.",
+    "categoria": "hamburguesas"
+  },
+  {
+    "id": 6,
+    "nombre": "Cuatro Quesos",
+    "img": "img/hamburguesas/cuatroquesos.png",
+    "precio": 40000,
+    "ingredientes": "Pan con sésamo, carne vacuna, cheddar, mozzarella, queso azul, provolone, salsa de quesos, lechuga y tomate.",
+    "categoria": "hamburguesas"
+  },
+  {
+    "id": 7,
+    "nombre": "Mexicana Burger",
+    "img": "img/hamburguesas/mexicana.png",
+    "precio": 50000,
+    "ingredientes": "Pan con sésamo, carne vacuna, queso cheddar, jalapeños, pico de gallo, lechuga y salsa picante.",
+    "categoria": "hamburguesas"
+  },
+  {
+    "id": 8,
+    "nombre": "Egg Burger",
+    "img": "img/hamburguesas/gourmethuevoybacon.png",
+    "precio": 40000,
+    "ingredientes": "Pan con sésamo, carne vacuna, huevo frito, queso cheddar, panceta crocante, cebolla crispy, tomate, lechuga y salsa especial.",
+    "categoria": "hamburguesas"
+  }
+]
