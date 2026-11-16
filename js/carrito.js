@@ -116,3 +116,17 @@ if (overlay && carritoPanel) {
 }
 
 mostrarCarrito();
+
+function vaciarCarrito() {
+
+    carrito = [];
+
+    localStorage.removeItem("carrito");
+
+    mostrarCarrito();
+
+    actualizarContador();
+
+    cerrarModal();
+
+}

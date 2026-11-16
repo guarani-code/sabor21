@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/productos.css">
+    <link rel="stylesheet" href="css/modales.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
@@ -61,6 +62,10 @@
                     Total: 0 Gs.
                 </p>
 
+                <button onclick="abrirModal()" id="btn-vaciar-carrito" type="button">
+                    <i class="fa-solid fa-trash"></i>  Vaciar carrito
+                </button>
+
                 <button onclick="irFormulario()" id="btn-pedir">
                     Terminar mi pedido
                 </button>
@@ -87,7 +92,7 @@
                 <span>Ubicación</span>
             </a>
 
-            <a href="#contacto" class="footer-item">
+            <a href="contacto.html" class="footer-item">
                 <i class="fa-solid fa-phone"></i>
                 <span>Contacto</span>
             </a>
@@ -111,6 +116,24 @@
             </div>
         </div>
 
+        <!--Modal de alerta para eliminar los productos del carrito-->
+
+        <div class="modal" id="modal">
+            <div class="alert theme-danger" role="alert">
+                <p>¿Estás seguro que quieres borrar los productos del carrito?</p>
+        
+                <div>
+                    <button onclick="vaciarCarrito(); cerrarModal();">
+                        Sí, estoy seguro
+                    </button>
+        
+                    <button onclick="cerrarModal()">
+                        No, no quiero borrarlo
+                    </button>
+                </div>
+            </div>
+        </div>
+
 
         <!-- JAVASCRIPT -->
 
@@ -119,6 +142,8 @@
         <script src="js/categorias.js"></script>
         <script src="js/btn-hambur.js"></script>
         <script src="js/enlaces.js"></script>
+        <script src="js/modal.js"></script>
 
 </body>
+
 </html>

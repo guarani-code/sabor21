@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/modales.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header-app">
+
+        <a href="index.html" class="logo-centro">
+            <img src="img/logo.png" alt="Sabor 21">
+        </a>
+
+    </header>
+
+    <!-- CARRITO -->
+        <div class="overlay" id="overlay"></div>
+
+        <section id="carrito-panel">
+
+            <div class="carrito-header">
+
+                <h2>🛒 Mi carrito</h2>
+
+                <button id="cerrar-carrito">
+                    <img style="width: 35px;" src="img/x.png" alt="">
+                </button>
+
+            </div>
+
+
+            <div id="lista-carrito">
+                <!-- Productos del carrito -->
+            </div>
+
+
+            <div class="carrito-footer">
+
+                <p id="total">
+                    Total: 0 Gs.
+                </p>
+
+                <button onclick="abrirModal()" id="btn-vaciar-carrito" type="button">
+                    <i class="fa-solid fa-trash"></i>  Vaciar carrito
+                </button>
+
+                <button onclick="irFormulario()" id="btn-pedir">
+                    Terminar mi pedido
+                </button>
+
+            </div>
+
+        </section>
+
+<section class="contacto">
+    <div class="contacto-header">
+        <h3>¿Tienes alguna consulta?</h3>
+        <p>
+            Estamos para ayudarte.<br>
+            Completa el formulario y te respondemos lo antes posible.
+        </p>
+    </div>
+
+    <form id="formulario-contacto" class="formulario-contacto">
+
+        <div class="campo campo-completo">
+            <label for="nombre">Nombre y apellido</label>
+            <input
+                type="text"
+                id="nombre_apellido"
+                name="nombre"
+                placeholder="Ejemplo: Juan Pérez"
+                required
+            >
+        </div>
+
+        <div class="campo">
+            <label for="telefono">Número de teléfono</label>
+            <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="Ejemplo: 0974924226"
+                minlength="10"
+                maxlength="10"
+                required
+            >
+        </div>
+
+        <div class="campo">
+            <label for="asunto">Asunto</label>
+            <select id="asunto" name="asunto" required>
+                <option value="" selected disabled>Elija una opción</option>
+                <option value="Consulta sobre productos">Consulta sobre productos</option>
+                <option value="Consulta sobre precios">Consulta sobre precios</option>
+                <option value="Horarios de atención">Horarios de atención</option>
+                <option value="Delivery y ubicación">Delivery y ubicación</option>
+                <option value="Otros">Otros</option>
+            </select>
+        </div>
+
+        <div class="campo campo-completo">
+            <label for="mensaje">Mensaje <span>(opcional)</span></label>
+            <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="5"
+                placeholder="Escribe tu consulta aquí..."
+            ></textarea>
+        </div>
+
+        <div class="acciones campo-completo">
+            <button id="btn-enviar-mensaje" type="submit">
+                Enviar consulta
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </div>
+
+    </form>
+</section>
+
+
+    <!--Footer-->
+    <footer class="footer-app">
+
+        <a href="index.html" class="footer-item ">
+            <i class="fa-solid fa-house"></i>
+            <span>Inicio</span>
+        </a>
+
+        <a href="#promociones" class="footer-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Ubicación</span>
+        </a>
+
+        <a href="contacto.html" class="footer-item activo">
+            <i class="fa-solid fa-phone"></i>
+            <span>Contacto</span>
+        </a>
+
+        <button class="footer-item btn-carrito" id="btn-carrito" type="button">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Carrito</span>
+            <span class="footer-contador contador-carrito">0</span>
+        </button>
+
+    </footer>
+
+
+
+    <!--Modal de alerta para eliminar los productos del carrito-->
+
+        <div class="modal" id="modal">
+            <div class="alert theme-danger" role="alert">
+                <p>¿Estás seguro que quieres borrar los productos del carrito?</p>
+        
+                <div>
+                    <button onclick="vaciarCarrito(); cerrarModal();">
+                        Sí, estoy seguro
+                    </button>
+        
+                    <button onclick="cerrarModal()">
+                        No, no quiero borrarlo
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- Scripts -->
+    <script src="js/enviar-mensaje.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/btn-hambur.js"></script>
+    <script src="js/pedido.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/enlaces.js"></script>
+
+
+</body>
+
+</html>

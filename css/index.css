@@ -4,6 +4,18 @@ html {
     -ms-overflow-style: none;
 }
 
+/* Chrome, Edge y Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 html::-webkit-scrollbar,
 body::-webkit-scrollbar,
 *::-webkit-scrollbar {
@@ -376,6 +388,7 @@ body {
     border: none; 
      transition: transform 0.3s ease;
      color: white;
+     margin: 5px;
 }
 
 .btn-mas{
@@ -385,6 +398,7 @@ body {
     border: none;
      transition: transform 0.3s ease;
      color: white;
+     margin: 5px;
 }
 
 /*btn-pedir y total*/
@@ -416,6 +430,16 @@ body {
 
 .btn-mas:hover, .btn-menos:hover {
     transform: scale(1.1);
+}
+
+#btn-vaciar-carrito{
+    display: block;
+    margin-left: auto;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
 }
 
  /*responsive*/
@@ -451,4 +475,31 @@ body {
     font-size: 15px;
 }
 
+}
+
+/*Saludo personalizado*/
+.contenedor-categoria-saludo{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+.contenedor-saludo{
+    background-color:#252525;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+#fecha{
+    text-align: right;
+}
+
+
+#hora{
+    font-size: 30px;
+    text-align: right;
+}
+
+#saludo{
+    color: #FF8A45;
 }
