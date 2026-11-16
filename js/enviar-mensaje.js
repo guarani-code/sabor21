@@ -8,12 +8,24 @@ btnEnviarmensaje.addEventListener("submit", function(event){
     const asunto = document.getElementById('asunto').value;
     const mensaje = document.getElementById('mensaje').value;
 
-    const texto = `Hola quiero realizar una consulta.
+    const texto = `🍔 *SABOR 21*
+━━━━━━━━━━━━━━━━━━
 
-    Nombre: ${nombre_apellido}
-    Teléfono: ${telefono}
-    Asunto: ${asunto}
-    Mensaje: ${mensaje}`;
+    ¡Hola! Quisiera realizar una consulta.
+
+👤 *DATOS DEL CLIENTE* 👤
+
+Nombre: ${nombre_apellido}
+Teléfono: ${telefono}
+
+*ASUNTO*
+${asunto}
+
+*MENSAJE*
+${mensaje}
+
+━━━━━━━━━━━━━━━━━━
+¡Muchas gracias!`;
 
     const numeroWhat = "595974924226";
 
