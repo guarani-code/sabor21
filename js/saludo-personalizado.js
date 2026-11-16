@@ -1,7 +1,5 @@
 const textsaludo = document.getElementById('saludo');
 const texthora = document.getElementById('hora');
-const textfecha = document.getElementById('fecha');
-const textfrase = document.getElementById('frase');
 
 
 function actualizarHorario() {
@@ -15,9 +13,6 @@ function actualizarHorario() {
     const minutos = fecha.getMinutes();
 
     const hora12 = hora % 12 || 12;
-
-    // Mostrar fecha
-    textfecha.innerText = `${dia}/${mes}`;
 
     // Mostrar hora
     texthora.innerText = `${hora12}:${String(minutos).padStart(2, '0')}`;
