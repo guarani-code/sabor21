@@ -1,4 +1,4 @@
-const btnPedir = document.getElementById("btn-pedir");
+const btnPedir = document.getElementById("btn-enviar");
 
 if (btnPedir) {
     btnPedir.addEventListener("click", () => {
