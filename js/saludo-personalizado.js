@@ -33,4 +33,4 @@ function actualizarHorario() {
 
 actualizarHorario();
 
-setInterval(actualizarHorario, 60000);
+setInterval(actualizarHorario, 1000);
