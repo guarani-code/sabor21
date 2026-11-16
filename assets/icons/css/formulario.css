@@ -1,0 +1,95 @@
+.formulario-pedido {
+    width: min(100% - 32px, 440px);
+    margin: 24px auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: #f5f5f5;
+    background: #111;
+    border: 1px solid #ff5e00;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px #0006;
+}
+
+.formulario-pedido h2 {
+    margin: 0;
+    color: #ff6b16;
+}
+
+.formulario-descripcion {
+    margin: 0 0 8px;
+    color: #aaa;
+}
+
+.formulario-pedido input:not([type="radio"]),
+.formulario-pedido textarea {
+    width: 100%;
+    padding: 12px;
+    color: #fff;
+    background: #1c1c1c;
+    border: 1px solid #444;
+    border-radius: 8px;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+.formulario-pedido input:focus,
+.formulario-pedido textarea:focus {
+    outline: 2px solid #ff6b16;
+    border-color: transparent;
+}
+
+.formulario-pedido fieldset {
+    margin: 4px 0;
+    padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    border: 1px solid #444;
+    border-radius: 8px;
+}
+
+.formulario-pedido legend {
+    padding: 0 6px;
+    color: #ddd;
+}
+
+.opcion-entrega {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.opcion-entrega input {
+    accent-color: #ff6b16;
+}
+
+.formulario-pedido label span {
+    color: #999;
+    font-size: 0.85em;
+}
+
+.btn-ubicacion,
+.btn-enviar-pedido {
+    padding: 12px 16px;
+    color: #fff;
+    background: #ff5e00;
+    border: 0;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-ubicacion:hover,
+.btn-enviar-pedido:hover {
+    background: #e65300;
+}
+
+#estado-ubicacion {
+    min-height: 1.2em;
+    margin: 4px 0;
+    color: #ffb27c;
+    font-size: 0.9em;
+}
