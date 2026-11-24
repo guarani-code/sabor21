@@ -29,7 +29,9 @@ async function cargarProductos() {
     if (titulo) titulo.textContent = nombreCategoria;
 
     try {
-        const respuesta = await fetch(`json/${categoria}.json`);
+        const respuesta = await fetch(
+            `php/listar_productos.php?categoria=${encodeURIComponent(categoria)}`
+        );
         if (!respuesta.ok) throw new Error(`Error HTTP ${respuesta.status}`);
         const productos = await respuesta.json();
         if (!Array.isArray(productos)) throw new Error("El JSON debe contener una lista de productos.");

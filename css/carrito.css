@@ -1,0 +1,238 @@
+/* Lista de productos */
+#lista-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 5px;
+}
+
+/* Scroll personalizado */
+#lista-carrito::-webkit-scrollbar {
+    width: 5px;
+}
+
+#lista-carrito::-webkit-scrollbar-thumb {
+    background: #ff6b16;
+    border-radius: 10px;
+}
+
+/* Tarjeta del producto */
+.item-carrito {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 14px;
+    background: #252525;
+    border: 1px solid #353535;
+    border-radius: 14px;
+    transition: border-color 0.25s ease,
+                transform 0.25s ease;
+}
+
+.item-carrito:hover {
+    border-color: #ff6b16;
+    transform: translateY(-2px);
+}
+
+/* Imagen del producto */
+.contenedor-item {
+    width: 85px;
+    height: 85px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 11px;
+}
+
+.imagen-carrito {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.item-carrito:hover .imagen-carrito {
+    transform: scale(1.06);
+}
+
+/* Información del producto */
+.info-producto {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    min-width: 0;
+}
+
+#lista-carrito .info-producto h4 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+#lista-carrito .info-producto .precio-producto {
+    margin: 0;
+    color: #ff6b16;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Controles de cantidad */
+.cantidad {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 3px;
+}
+
+.cantidad span {
+    min-width: 18px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Botones + y - */
+.btn-menos,
+.btn-mas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background: #ff6b16;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease,
+                transform 0.2s ease;
+}
+
+.btn-menos:hover,
+.btn-mas:hover {
+    background: #e85a0b;
+    transform: scale(1.08);
+}
+
+.btn-menos:active,
+.btn-mas:active {
+    transform: scale(0.94);
+}
+
+/* Botón cerrar carrito */
+#cerrar-carrito {
+    display: block;
+    margin-left: auto;
+    padding: 6px;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.25s ease,
+                transform 0.25s ease;
+}
+
+#cerrar-carrito:hover {
+    color: #ff6b16;
+    transform: rotate(90deg);
+}
+
+/*btn-pedir y total*/
+.carrito-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#total{
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    text-align: right;
+    font-size: 15px;
+    padding: 10px;
+}
+
+#btn-pedir{
+    background-color: #ff6b16;
+    padding: 20px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 15px;
+}
+
+.btn-mas:hover, .btn-menos:hover {
+    transform: scale(1.1);
+}
+
+#btn-vaciar-carrito{
+    display: block;
+    margin-left: auto;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+}
+
+ /*responsive*/
+@media (max-width: 768px) {
+
+     #carrito-panel {
+        width: 100%;
+        padding: 20px;
+        height: 85vh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    }
+
+    /*categorias*/
+    .contenedor-categoria {
+    display: grid;
+    grid-template-columns: repeat(2, 140px);
+    justify-content: center;
+    justify-items: center;
+    column-gap: 35px;
+    row-gap: 20px;
+
+    width: 100%;
+    margin: 25px auto;
+    padding: 0;
+}
+
+.item-categoria {
+    width: 140px;
+}
+
+.item-categoria p {
+    font-size: 15px;
+}
+
+}
+
+/*Imagen carrito*/
+.imagen-carrito {
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.info-producto {
+    flex: 1;
+}

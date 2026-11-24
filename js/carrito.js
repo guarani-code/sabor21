@@ -38,10 +38,23 @@ function mostrarCarrito() {
             const item = document.createElement("div");
             item.className = "item-carrito";
             item.innerHTML = `
-                <h4></h4><p class="precio-producto"></p>
-                <div class="cantidad"><button class="btn-menos" type="button">−</button><span></span><button class="btn-mas" type="button">+</button></div>
-            `;
+            <div class="contenedor-item">
+            <img class="imagen-carrito" alt="">
+            </div>
+            <div class="info-producto">
+            <h4></h4>
+            <p class="precio-producto"></p>
+            <div class="cantidad">
+            <button class="btn-menos" type="button">−</button>
+            <span></span>
+            <button class="btn-mas" type="button">+</button>
+            </div>
+         </div>
+`;
             item.querySelector("h4").textContent = producto.nombre;
+            const imagen = item.querySelector(".imagen-carrito");
+            imagen.src = producto.img;
+            imagen.alt = producto.nombre;
             item.querySelector(".precio-producto").textContent = formatoPrecio(producto.precio);
             item.querySelector(".cantidad span").textContent = producto.cantidad;
             item.querySelector(".btn-mas").addEventListener("click", () => cambiarCantidad(producto.id, 1));

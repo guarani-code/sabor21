@@ -8,7 +8,14 @@ if (btnPedir) {
         }
 
         const valor = (id) => document.getElementById(id)?.value?.trim() || "No especificado";
-        let mensaje = `*NUEVO PEDIDO - SABOR 21*\n\n👤 Cliente: ${valor("nombre")}\n📍 Dirección: ${valor("direccion")}\n📱 Teléfono: ${valor("telefono")}\n\n🛒 *PEDIDO:*\n`;
+        let mensaje = `🍔 *NUEVO PEDIDO - SABOR 21* 🍔
+
+        👤 Cliente: ${valor("nombre")}
+        📍 Dirección: ${valor("direccion")}
+        📱 Teléfono: ${valor("telefono")}
+
+        🛒 *PEDIDO:*
+        `;
         let suma = 0;
 
         carrito.forEach((producto) => {
