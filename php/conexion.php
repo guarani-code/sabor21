@@ -7,24 +7,18 @@ $db   = getenv('DB_NAME');
 $user = getenv('DB_USER');
 $pass = getenv('DB_PASSWORD');
 
-try {
-    $conexion = new PDO(
-        "pgsql:host=$host;port=$port;dbname=$db;sslmode=require",
-        $user,
-        $pass
+if (!$host || !$port || !$db || !$user || !$pass) {
+    throw new RuntimeException(
+        "Faltan variables de entorno de la base de datos."
     );
-
-    $conexion->setAttribute(
-        PDO::ATTR_ERRMODE,
-        PDO::ERRMODE_EXCEPTION
-    );
-
-    $conexion->setAttribute(
-        PDO::ATTR_DEFAULT_FETCH_MODE,
-        PDO::FETCH_ASSOC
-    );
-
-} catch (PDOException $e) {
-    error_log($e->getMessage());
-    die("Error al conectar con Supabase.");
 }
+
+$conexion = new PDO(
+    "pgsql:host=$host;port=$port;dbname=$db;sslmode=require",
+    $user,
+    $pass,
+    [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+    ]
+);
